@@ -6,12 +6,11 @@ function add(number1, number2) {
 /* Function Definition - Add Numbers */
 
 function addNumbers() {
-  var num1 = parseFloat(document.getElementById("add1").value);
-  var num2 = parseFloat(document.getElementById("add2").value);
-  var sumElement = document.getElementById("sum");
+  let num1 = parseFloat(document.getElementById("add1").value);
+  let num2 = parseFloat(document.getElementById("add2").value);
+  let sumElement = document.getElementById("sum");
   sumElement.value = add(num1, num2);
 }
-
 document.getElementById("addNumbers").addEventListener("click", addNumbers);
 /* Function Expression - Subtract Numbers */
 
