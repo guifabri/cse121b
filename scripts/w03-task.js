@@ -77,10 +77,20 @@ document.getElementById('#evens').innerHTML = numbersArray.filter(number => numb
 /* Output Sum of Org. Array */
 
 
-numbersArray.reduce((total, current) => total + current, 0);
+let sum = numbers.reduce((total, current) => total + current, 0);
 
 document.getElementById("sumOfArray").innerText = sum;
 
 /* Output Multiplied by 2 Array */
 
+let multipliedArray = numbers.map(number => number * 2);
+
+document.getElementById("multiplied").innerHTML = multipliedArray;
 /* Output Sum of Multiplied by 2 Array */
+
+
+multipliedArray = numbers.map(number => number * 2);
+
+let sumOfMultiplied = multipliedArray.reduce((total, current) => total + current, 0);
+
+document.getElementById("sumOfMultiplied").innerText = sumOfMultiplied;
