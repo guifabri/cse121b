@@ -58,13 +58,28 @@ document.querySelector('#calculateTotal').addEventListener('click', function() {
 });
 
 /* ARRAY METHODS - Functional Programming */
+
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.getElementById('array').innerHTML = numbers;
+
 /* Output Source Array */
 
 /* Output Odds Only Array */
 
+let odds = numbersArray.filter(number => number % 2 !== 0);
+document.getElementById('odds').innerHTML = odds;
+
 /* Output Evens Only Array */
 
+let evens = numbersArray.filter(number => number % 2 === 0);
+document.getElementById('#evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
+;
 /* Output Sum of Org. Array */
+
+
+numbersArray.reduce((total, current) => total + current, 0);
+
+document.getElementById("sumOfArray").innerText = sum;
 
 /* Output Multiplied by 2 Array */
 
