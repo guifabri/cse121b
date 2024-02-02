@@ -1,5 +1,6 @@
 /* LESSON 3 - Programming Tasks */
 /* FUNCTIONS */
+
 function add(number1, number2) {
   return number1 + number2;
 }
@@ -13,8 +14,16 @@ function addNumbers() {
 }
 document.getElementById("addNumbers").addEventListener("click", addNumbers);
 /* Function Expression - Subtract Numbers */
+function subtractNumbers() {
+  let num1 = parseFloat(document.getElementById('subtract1').value);
+  let num2 = parseFloat(document.getElementById('subtract2').value);
+  let result = num1 - num2;
+  document.getElementById('difference').value = result;
+}
 
+document.getElementById('subtractNumbers').onclick = subtractNumbers;
 /* Arrow Function - Multiply Numbers */
+
 /* Open Function Use - Divide Numbers */
 /* Decision Structure */
 /* ARRAY METHODS - Functional Programming */
