@@ -1,17 +1,28 @@
 const url =
-  "https://webknox-jokes.p.rapidapi.com/jokes/search?keywords=kick%2C%20hard&numJokes=5&category=Chuck%20Norris&minRating=5";
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
-    "X-RapidAPI-Host": "webknox-jokes.p.rapidapi.com",
-  },
+  "https://guifabri.github.io/cse121b/project/json-jokes/fun-jokes.json";
+
+let jokesList = [];
+let randomIndex;
+
+const getJokes = async () => {
+  const response = await fetch(url);
+  jokesList = await response.json();
+  console.log(jokesList);
+  printRandomJoke();
+};
+const printRandomJoke = () => {
+  randomIndex = Math.floor(Math.random() * jokesList.length);
+  let itemJoke = jokesList[randomIndex];
+  document.querySelector("#jokeContainer").textContent = itemJoke.question;
 };
 
-try {
-  const response = await fetch(url, options);
-  const result = await response.text();
-  console.log(result);
-} catch (error) {
-  console.error(error);
-}
+document.querySelector("#jokeBtn").addEventListener("click", () => {
+  printRandomJoke();
+
+  document.querySelector("#jokeAnswer").innerHTML = "";
+});
+document.querySelector("#btnAnswer").addEventListener("click", () => {
+  let itemJoke = jokesList[randomIndex];
+  document.querySelector("#jokeAnswer").textContent = itemJoke.answer;
+});
+getJokes();
