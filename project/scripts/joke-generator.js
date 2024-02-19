@@ -1,5 +1,5 @@
 const url =
-  "https://guifabri.github.io/cse121b/project/json-jokes/fun-jokes.json";
+  "https://guifabri.github.io/cse121b/project.html/json-jokes/fun-jokes.json";
 
 let jokesList = [];
 let randomIndex;
